@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import DesktopNav from "./component/DesktopNav";
+import Hero from "./component/Hero";
+import Benefits from "./component/Benefits";
+import RecentBlogPosts from "./component/RecentBlogPosts";
+import MobileMenu from "./component/MobileMenu";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="overlay"></div>
+      {/* nav */}
+      <nav>
+        <DesktopNav />
+        <MobileMenu />
+      </nav>
+      {/* Hero */}
+      <section className="wrapper hero_section">
+        <Hero />
+      </section>
+      {/* benefits */}
+      <section className="wrapper benefits_section">
+        <Benefits />
+      </section>
+      {/* latest articles */}
+      <section className="wrapper RecentArticles">
+        <RecentBlogPosts />
+      </section>
     </div>
   );
 }
-
-export default App;

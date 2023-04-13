@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+/* variables */
+:root {
+  --Dark-Blue: hsl(233, 26%, 24%);
+  --Lime-Green: hsl(136, 65%, 51%);
+  --Bright-Cyan: hsl(192, 70%, 51%);
+
+  /* ### Neutral */
+
+  --Grayish-Blue: hsl(233, 8%, 62%);
+  --Light-Grayish-Blue: hsl(220, 16%, 96%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+
+  /* ### Transition */
+  transition: all 0.5s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Public Sans", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+.wrapper {
+  padding: 1.5rem 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 2rem 1.2rem;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  list-style-type: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: var(--trans);
+}
+
+.overlay.show {
+  opacity: 1;
+}
+
+/* logo and hambuger memu mobile design */
+/* logo and hambuger memu mobile design */
+nav {
+  position: relative;
+}
+
+nav .wrapper {
+  position: relative;
+  padding-block: 1.5rem;
+  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 3px 0px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  background-color: var(--White);
+}
+
+.wrapper .invite--btn,
+.navlinks {
+  display: none;
+}
+
+.nav--logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hambuger-icon.hide {
+  display: none;
+}
+
+.close-icon {
+  display: none;
+}
+
+.close-icon.show {
+  display: inline;
+}
+
+/* mobile menu */
+/* mobile menu */
+
+.menu {
+  position: absolute;
+  width: 90%;
+  background-color: var(--White);
+  left: 50%;
+  transform: translateX(-50%);
+  top: 5.875rem;
+  padding: 2rem 0;
+  border-radius: 0.7rem;
+  border: 1px solid #111;
+  opacity: 0;
+  z-index: -1;
+  transition: var(--trans);
+}
+
+.menu.visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.menu ul li:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.menu ul li a {
+  display: block;
+  width: fit-content;
+  padding: 0.5rem;
+  margin: 0 auto;
+  color: var(--Dark-Blue);
+  font-weight: 600;
 }
