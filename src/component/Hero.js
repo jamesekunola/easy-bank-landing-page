@@ -1,6 +1,4 @@
 import React from "react";
-import PhonebgDesktop from "../images/bg-intro-desktop.svg";
-import PhonebgMobile from "../images/bg-intro-mobile.svg";
 import MockupsImg from "../images/image-mockups.png";
 
 export default function Hero() {
@@ -8,16 +6,6 @@ export default function Hero() {
     <div className="hero--container">
       {/* hero image */}
       <div className="hero-images">
-        {/* <img
-          src={PhonebgDesktop}
-          alt="a background of dark blue and light green"
-          className="desktop_phone"
-        />
-        <img
-          src={PhonebgMobile}
-          alt="a background of dark blue and light green"
-          className="mobile_phone"
-        /> */}
         <img src={MockupsImg} alt="phone mockups" />
       </div>
       {/* hero text */}
