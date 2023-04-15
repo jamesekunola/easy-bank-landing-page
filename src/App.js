@@ -5,15 +5,21 @@ import Hero from "./component/Hero";
 import Benefits from "./component/Benefits";
 import RecentBlogPosts from "./component/RecentBlogPosts";
 import Footer from "./component/Footer";
+import { useState } from "react";
 
 export default function App() {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
   return (
     <div className="container">
       <div className="overlay"></div>
       {/* nav */}
       <nav>
-        <DesktopNav />
-        <MobileMenu />
+        <DesktopNav
+          showMobileMenu={showMobileMenu}
+          onShowMobileMenu={setShowMobileMenu}
+        />
+        {showMobileMenu ? <MobileMenu /> : null}
       </nav>
 
       {/* Hero */}

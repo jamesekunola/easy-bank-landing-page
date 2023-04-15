@@ -3,9 +3,9 @@ import Logo from "../images/logo.svg";
 import HamburgerIcon from "../images/icon-hamburger.svg";
 import CloseIcon from "../images/icon-close.svg";
 
-export default function DesktopNav() {
+export default function DesktopNav({ showMobileMenu, onShowMobileMenu }) {
   const HandleClick = () => {
-    console.log("rock and roll");
+    onShowMobileMenu((shown) => !shown);
   };
 
   return (
@@ -17,12 +17,15 @@ export default function DesktopNav() {
         </a>
 
         <button className="flex mobile_nav-btn" onClick={HandleClick}>
-          <span className="hambuger-icon">
-            <img src={HamburgerIcon} alt="open mobile nav" />
-          </span>
-          <span className="close-icon">
-            <img src={CloseIcon} alt="Close mobile nav" />
-          </span>
+          {showMobileMenu ? (
+            <span className="close-icon">
+              <img src={CloseIcon} alt="Close mobile nav" />
+            </span>
+          ) : (
+            <span className="hambuger-icon">
+              <img src={HamburgerIcon} alt="open mobile nav" />
+            </span>
+          )}
         </button>
       </div>
       {/* navlinks */}

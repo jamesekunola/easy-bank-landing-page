@@ -8,69 +8,71 @@ import FooterLogo from "../images/footer-logo.svg";
 
 export default function Footer() {
   return (
-    <footer className="flex wrapper">
+    <footer className="wrapper">
       <div className="footer--container">
-        <div className="footer-socials">
-          <a href="#">
-            <img src={FooterLogo} alt="easybank" className="footer--logo" />
-          </a>
+        <div className="footer-logo__links-container">
+          <div className="footer-socials">
+            <a href="#">
+              <img src={FooterLogo} alt="easybank" className="footer--logo" />
+            </a>
 
-          <ul className="socials-media__link">
-            <li>
-              <a href="#">
-                <img src={FacebookIcon} alt="Facebook" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src={YoutubeIcon} alt="Youtube" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src={TwitterIcon} alt="twitter" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src={pinterestIcon} alt="pinterest" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src={InstagramIcon} alt="instagram" />
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* footer links */}
-        <div className="footer-link__container">
-          <div className="footer--links">
-            <ul>
+            <ul className="socials-media__link">
               <li>
-                <a href="#">About Us</a>
+                <a href="#">
+                  <img src={FacebookIcon} alt="Facebook" />
+                </a>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#">
+                  <img src={YoutubeIcon} alt="Youtube" />
+                </a>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <a href="#">
+                  <img src={TwitterIcon} alt="twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src={pinterestIcon} alt="pinterest" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src={InstagramIcon} alt="instagram" />
+                </a>
               </li>
             </ul>
           </div>
-          <div className="footer--links">
-            <ul>
-              <li>
-                <a href="#">Careers</a>
-              </li>
-              <li>
-                <a href="#">Support</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-            </ul>
+
+          {/* footer links */}
+          <div className="footer-link__container">
+            <div className="footer--links">
+              <ul>
+                <li>
+                  <a href="#">About Us</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+              </ul>
+            </div>
+            <div className="footer--links">
+              <ul>
+                <li>
+                  <a href="#">Careers</a>
+                </li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         {/* invite btn */}
