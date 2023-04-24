@@ -136,8 +136,8 @@ a {
   opacity: 0.7;
 }
 
-/* logo and hambuger memu mobile design */
-/* logo and hambuger memu mobile design */
+/* logo and Hamburger menu mobile design */
+/* logo and Hamburger menu mobile design */
 nav {
   position: relative;
 }
@@ -175,8 +175,10 @@ nav .invite--btn,
   top: 5.875rem;
   padding: 2rem 0;
   border-radius: 0.7rem;
-  border: 1px solid #111;
   transition: var(--trans);
+  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 5px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 .menu ul li:not(:last-of-type) {
@@ -190,6 +192,11 @@ nav .invite--btn,
   margin: 0 auto;
   color: var(--Dark-Blue);
   font-weight: 600;
+  transition: var(--fast-trans);
+}
+
+.menu ul li a:hover {
+  color: var(--Lime-Green);
 }
 /* ##  {nav and  logo end}  ## */
 /* ##  {nav and  logo end}  ## */
@@ -249,9 +256,9 @@ nav .invite--btn,
 .benefits-card_container,
 .recent-blog-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(284.25px, 1fr));
-  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(17.76rem, 1fr));
   gap: 1rem;
+  align-items: stretch;
 }
 /*## Benefits section End ##*/
 /*## Benefits section End ##*/

@@ -10,7 +10,7 @@ export default function DesktopNav({ showMobileMenu, onShowMobileMenu }) {
 
   return (
     <div className="wrapper">
-      {/* logo / hamburgar */}
+      {/* logo / hamburger */}
       <div className="nav--logo">
         <a href="#home" className="logo">
           <img src={Logo} alt="easybank" />
